@@ -1,0 +1,20 @@
+.topSearchMain {
+    padding: 0 var(--universalPadding);
+    margin-top: 75px;
+}
+
+.topSearchMain h3 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.cardsSection {
+    width: 100%;
+    height: auto;
+    /* overflow: hidden; */
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}

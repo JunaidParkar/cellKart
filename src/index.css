@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: sans-serif;
+}
+
+:root {
+    --universalPadding: 200px;
+    --mainThemeColour: #F19C4E;
+    --secondaryThemeColour: #DAD9CA;
+    --aldrichFont: 'Aldrich', sans-serif;
+    --josefinSans: 'Josefin Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.padding {
+    padding: 0 var(--universalPadding);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

@@ -1,0 +1,69 @@
+.cardMain {
+    width: 100%;
+    height: 475px;
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.cardMain .cardImg {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+}
+
+.cardMain .cardImg img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.details {
+    padding: 10px;
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.deviceName {
+    width: 100%;
+}
+
+.deviceName h3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: 3px;
+    font-weight: 500;
+    font-family: var(--josefinSans);
+}
+
+.deviceVarient {
+    margin-top: 5px;
+    font-weight: 300;
+    font-size: 14px;
+    color: rgba(0, 0, 0, .5);
+}
+
+.DevicePrice {
+    margin-top: 15px;
+}
+
+.devicePurchase {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--mainThemeColour);
+    margin-top: 15px;
+    padding: 10px 0;
+    border-radius: 10px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
