@@ -6,6 +6,11 @@
     font-family: sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
 :root {
     --universalPadding: 200px;
     --mainThemeColour: #F19C4E;
