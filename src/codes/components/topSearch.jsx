@@ -14,20 +14,6 @@ const TopSearch = () => {
                 <Cards />
                 <Cards />
                 <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
             </div>
         </div>
     </>

@@ -1,15 +1,21 @@
 .cardMain {
     width: 100%;
-    height: 475px;
+    height: 400px;
     box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .5);
     border-radius: 10px;
     border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .cardMain .cardImg {
-    width: 100%;
-    height: auto;
+    width: 200px;
+    height: 200px;
     aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cardMain .cardImg img {
@@ -22,7 +28,7 @@
 .details {
     padding: 10px;
     width: 100%;
-    /* height: 100%; */
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

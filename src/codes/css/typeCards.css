@@ -1,0 +1,13 @@
+.typeCardMain {
+    min-width: 200px;
+    height: 75px;
+    background: var(--mainThemeColour);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    letter-spacing: 3px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: var(--josefinSans);
+}
