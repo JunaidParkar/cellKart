@@ -1,0 +1,124 @@
+.loginMain {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.adminLoginContainer {
+    width: 500px;
+    height: 525px;
+    background: white;
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, .5);
+    border-radius: 10px;
+}
+
+.headerAdminLogin {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+}
+
+.headerAdminLogin h3 {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: var(--aldrichFont);
+    color: var(--mainThemeColour);
+}
+
+.loginMainSectionAdmin {
+    width: 100%;
+    margin-top: 75px;
+}
+
+.inputs {
+    width: 100%;
+    height: 100px;
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 20px;
+    margin-bottom: 25px;
+}
+
+.inputs label {
+    text-transform: uppercase;
+    color: var(--mainThemeColour);
+    width: 100%;
+    height: calc(100%/3);
+}
+
+.inputs label,
+.inputs input,
+.inputs .error {
+    width: 100%;
+    height: calc(100% / 3);
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+}
+
+.inputs input,
+.inputs input:focus {
+    height: calc(100% / 3);
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid var(--mainThemeColour);
+    letter-spacing: 2px;
+}
+
+.inputs label.isError,
+.inputs input.isError,
+.inputs .error.isError {
+    color: red;
+}
+
+.inputs input.isError,
+.inputs input.isError {
+    /* border-color: red; */
+    border: 2px solid red;
+}
+
+.inputs .error {
+    color: red;
+    letter-spacing: 2px;
+}
+
+.changableOptions {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.changableOptions a {
+    color: black;
+}
+
+.submitSection {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: 15px;
+}
+
+.submitSection input {
+    width: 100%;
+    padding: 10px;
+    background: var(--mainThemeColour);
+    border: 0;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+/* .headerAdminLogin{} */

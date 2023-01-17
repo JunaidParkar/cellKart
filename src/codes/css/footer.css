@@ -40,7 +40,7 @@
 }
 
 .newsletterHeaders h3 {
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .newsletterHeaders p {
@@ -55,7 +55,7 @@
 }
 
 .newsletterInputs h3 {
-    font-size: 25px;
+    font-size: 20px;
     /* display: flex; */
     /* flex-direction: column; */
     /* justify-content: start; */
@@ -100,7 +100,7 @@
 }
 
 .developer h3 {
-    font-size: 25px;
+    font-size: 20px;
     width: 50%;
     text-transform: uppercase;
     letter-spacing: 3px;
