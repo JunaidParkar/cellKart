@@ -31,7 +31,6 @@ const Login = () => {
                 setUsernameError(false)
                 if (credentialsByUser.password == doc.data().password) {
                     localStorage.setItem("cred",`${Math.floor(Math.random() * 10000000000)}.${doc.data().password}.${doc.id}.${doc.data().username}.${Math.floor(Math.random() * 10000000000)}`)
-                    console.log(localStorage.getItem("cred"))
                     setIsDisabled(false)
                     setPasswordError(false)
                     navigate('/adm/dashboard')

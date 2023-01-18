@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import AdminNavbar from '../../components/admin/adminNavbar'
 import "../../css/admin/dashboard.css"
 import { checkLogin } from '../../firebase/config'
 
@@ -24,7 +25,14 @@ const Dashboard = () => {
 
 
   return (
-    <div>Dashboard</div>
+    <>
+      <div className="dashboardContainer">
+        <div className="navigationSection">
+          <AdminNavbar />
+        </div>
+        <div className="optionsSection"></div>
+      </div>
+    </>
   )
 }
 
