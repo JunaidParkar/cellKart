@@ -37,6 +37,8 @@
     height: 50px;
     display: flex;
     padding: 0 15px;
+    cursor: pointer;
+    margin-top: 20px;
 }
 
 .optionsAdmin .iconAdminNavbar {

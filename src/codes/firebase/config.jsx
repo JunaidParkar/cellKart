@@ -32,7 +32,7 @@ const checkLogin = async () => {
       if ((dataUsername.trim() == username.trim()) && (dataPassword.trim() == password.trim())) {
         result = {cred : localStorage.getItem("cred")}
       } else {
-        result = {cred : false}
+        result = {cred : "nav"}
       }
     }
   })

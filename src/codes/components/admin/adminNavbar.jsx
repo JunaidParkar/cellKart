@@ -15,6 +15,36 @@ const AdminNavbar = () => {
                 </div>
                 <div className="textAdminNavbar">Add product</div>
             </div>
+            <div className="optionsAdmin">
+                <div className="iconAdminNavbar">
+                    <AiOutlineFolderAdd />
+                </div>
+                <div className="textAdminNavbar">Add product</div>
+            </div>
+            <div className="optionsAdmin">
+                <div className="iconAdminNavbar">
+                    <AiOutlineFolderAdd />
+                </div>
+                <div className="textAdminNavbar">Add product</div>
+            </div>
+            <div className="optionsAdmin">
+                <div className="iconAdminNavbar">
+                    <AiOutlineFolderAdd />
+                </div>
+                <div className="textAdminNavbar">Add product</div>
+            </div>
+            <div className="optionsAdmin">
+                <div className="iconAdminNavbar">
+                    <AiOutlineFolderAdd />
+                </div>
+                <div className="textAdminNavbar">Add product</div>
+            </div>
+            <div className="optionsAdmin">
+                <div className="iconAdminNavbar">
+                    <AiOutlineFolderAdd />
+                </div>
+                <div className="textAdminNavbar">Add product</div>
+            </div>
         </div>
     </div>
   )
