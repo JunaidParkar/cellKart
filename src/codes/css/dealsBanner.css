@@ -33,6 +33,11 @@
     left: 0;
 }
 
+.phoneDescription p {
+    font-size: 23px;
+    font-weight: 100 !important;
+}
+
 .dealsBannerMain .shopBtn {
     justify-content: end;
 }
