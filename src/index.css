@@ -1,30 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    bottom: 0;
     box-sizing: border-box;
-    user-select: none;
-    font-family: sans-serif;
-}
-
-::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+    font-family: 'Quicksand', sans-serif;
 }
 
 :root {
-    --universalPadding: 200px;
-    --mainThemeColour: #F19C4E;
-    --secondaryThemeColour: #DAD9CA;
-    --aldrichFont: 'Aldrich', sans-serif;
-    --josefinSans: 'Josefin Sans', sans-serif;
+    --blue: #CBF3F0;
+    --orange: #FF9F1C;
+    --orange-50: #FF9F1C44;
+    --white: #FFFFFF;
+    --mukta: 'Mukta', sans-serif;
 }
 
-a {
-    text-decoration: none;
+::-webkit-scrollbar {
+    display: none;
 }
 
-.padding {
-    padding: 0 var(--universalPadding);
-    margin-top: 50px;
-    margin-bottom: 50px;
+li {
+    list-style: none;
+}
+
+.home {
+    background-color: transparent;
+}
+
+.container-l {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.sub-heading {
+    padding: 10px;
+    font: 15px;
 }
