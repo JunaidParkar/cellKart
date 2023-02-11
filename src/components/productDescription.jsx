@@ -1,6 +1,7 @@
 import React from 'react'
 import '../css/productDescription.css'
 import productcard from '../js/common';
+import product from '../assets/product/p1.png'
 
 const ProductDescription = () => {
 
@@ -12,17 +13,17 @@ const ProductDescription = () => {
         <div className="prod-desc" id="prod-desc">
             <div className="box slide-top">
                 <div className="prod-nav">
-                    <img onclick={() => productclose()} src="https://img.icons8.com/ios/256/long-arrow-left.png" alt="" />
+                    <img onClick={() => productclose()} src="https://img.icons8.com/ios/256/long-arrow-left.png" alt="" />
                 </div>
                 <div className="img">
-                    <img src="product/p2.png" alt="" />
+                    <img src={product} alt="" />
                     <div className="heart active"></div>
                 </div>
                 <div className="img-container">
-                    <img src="product/p1.png" alt="" />
-                    <img src="product/p2.png" alt="" />
-                    <img src="product/p3.png" alt="" />
-                    <img src="product/p4.png" alt="" />
+                    <img src={product} alt="" />
+                    <img src={product} alt="" />
+                    <img src={product} alt="" />
+                    <img src={product} alt="" />
                 </div>
 
                 <div className="content">

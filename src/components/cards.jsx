@@ -2,10 +2,12 @@ import React from 'react'
 import '../css/cards.css'
 import phone from '../assets/product/p1.png'
 
-const Cards = () => {
+const Cards = (props) => {
+    console.log(props.data)
+    // alert(props.data)
   return (
     <>
-        <div className="product-card">
+        <div className="product-card" productid={props.data} onClick={() => {props.uid("hello")}}>
             <div className="img">
                 <img src={phone} alt="" />
             </div>
