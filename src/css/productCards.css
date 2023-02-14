@@ -5,11 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 180px;
-    /* flex-grow: 0;
-    flex-shrink: 0; */
-    /* flex-basis: 23.4%; */
-    /* border: 1px solid var(--orange); */
+    width: 230px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
