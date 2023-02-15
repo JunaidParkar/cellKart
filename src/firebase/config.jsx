@@ -1,14 +1,14 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getDatabase } from "firebase/database"
-import { getStorage, ref } from "firebase/storage"
+import { getStorage } from "firebase/storage"
 
 
 const firebaseConfig = {
   apiKey: "AIzaSyCsVftsDmNnUAxoF2rer3NexNffkPBUnfg",
   authDomain: "cellkart-904ec.firebaseapp.com",
   projectId: "cellkart-904ec",
-  storageBucket: "gs://cellkart-904ec.appspot.com",
+  storageBucket: "cellkart-904ec.appspot.com",
   messagingSenderId: "261581751620",
   appId: "1:261581751620:web:4876ee3f999a7675eb8311",
   measurementId: "G-6J202S71J4",

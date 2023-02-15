@@ -91,6 +91,9 @@
     .productSubmitWrapper input{
         font-size: 18px;
     }
+    .innerProductInputWrapper .productSubmitWrapper input{
+        padding: 10px 13px !important;
+    }
 }
 
 @media only screen and (max-width: 700px){
