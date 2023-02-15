@@ -6,7 +6,7 @@ const getAllProducts = async () => {
   let data
   let isError = false
 
-      const getAllProductsRef = ref( realtimeDB );
+      let getAllProductsRef = ref( realtimeDB );
       await get(child(getAllProductsRef, `cellkart/products`)).then((snapshot) => {
         if ( snapshot.exists()) {
           data = snapshot.val()

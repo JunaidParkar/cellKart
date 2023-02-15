@@ -1,0 +1,111 @@
+.mainDivContainer{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginForm{
+    width: 1000px;
+}
+
+.adminLoginHeading{
+    font-size: 25px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.inputWrappers{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.inputWrappers label{
+    font-size: 23px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.inputWrappers input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 0;
+    letter-spacing: 2px;
+    font-size: 20px;
+    background: #f5f5f5;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* height: 50px; */
+}
+
+.inputWrappers.forgotBtnContainer{
+    text-align: end;
+    text-transform: uppercase;
+}
+
+.inputWrappers.forgotBtnContainer a{
+    color: black;
+}
+
+.inputWrappers.loginBtn{
+    align-items: center;
+    margin-top: 20px;
+}
+
+.inputWrappers.loginBtn input{
+    width: 250px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 2000px) {
+    .loginForm{
+        width: 700px;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    .loginForm{
+        width: 500px;
+    }
+}
+
+@media only screen and (max-width: 560px){
+    .loginForm{
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .loginForm{
+        width: 300px;
+    }
+    .adminLoginHeading{
+        font-size: 20px;
+    }
+    .inputWrappers label{
+        font-size: 18px;
+    }
+    .inputWrappers input{
+        font-size: 17px;
+    }
+    .inputWrappers.forgotBtnContainer{
+        font-size: 15px;
+    }
+    .inputWrappers.loginBtn input{
+        width: 100%;
+        padding: 10px 20px;
+    }
+}
+
+@media only screen and (max-width: 330px){
+    .loginForm{
+        width: 200px;
+    }
+}
