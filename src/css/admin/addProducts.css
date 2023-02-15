@@ -1,3 +1,11 @@
+.mainContainerAdmin{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .addProductsForm{
     width: 75%;
 }
@@ -9,4 +17,99 @@
     text-transform: uppercase;
     font-size: 25px;
     margin-bottom: 50px;
+}
+
+.productInputWrapper,
+.innerProductInputWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.productInputWrapper label,
+.innerProductInputWrapper label{
+    margin-bottom: 15px;
+    font-size: 23px;
+    letter-spacing: 2px;
+}
+
+.productInputWrapper.inline{
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.innerProductInputWrapper{
+    width: calc(100% / 5);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.productInputWrapper input,
+.innerProductInputWrapper input,
+.productSubmitWrapper input,
+.productInputWrapper textarea {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-size: 18px;
+}
+
+.productInputWrapper input:focus,
+.innerProductInputWrapper input:focus,
+.productInputWrapper textarea:focus {
+    outline: none;
+}
+
+.productInputWrapper input[type=range],
+.innerProductInputWrapper input[type=range]{
+    box-shadow: none;
+    padding: 0;
+}
+
+.productSubmitWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.productSubmitWrapper input{
+    padding: 15px 50px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 800px){
+    .productInputWrapper label,
+    .innerProductInputWrapper label,
+    .productInputWrapper input,
+    .innerProductInputWrapper input,
+    .productSubmitWrapper input{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .mainContainerAdmin{
+        align-items: start !important;
+    }
+    .productInputWrapper.inline{
+        flex-wrap: wrap;
+    }
+    .innerProductInputWrapper{
+        width: calc(100% / 2.2);
+    }
+    .addProductsForm{
+        margin-top: 100px;
+    }
+}
+
+@media only screen and (max-width: 520px){
+    .innerProductInputWrapper{
+        width: 100%;
+    }
 }
