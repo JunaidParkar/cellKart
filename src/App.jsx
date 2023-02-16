@@ -15,6 +15,7 @@ const App = () => {
           <Route path='/codes' element={<AdminLogin />} />
           <Route path='/codes/admin' element={<AdminPanel />} />
           <Route path='/codes/admin/addproducts' element={<AddProduct />} />
+          {/* ffhf */}
         </Routes>
       </BrowserRouter>
     </>
