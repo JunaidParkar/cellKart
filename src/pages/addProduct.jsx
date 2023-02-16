@@ -44,64 +44,37 @@ const AddProduct = () => {
           })
         }
         checkLoginStatus()
-      }, [])
+    }, [])
   
-      const navigate = useNavigate()
+    const navigate = useNavigate()
 
-      if (productData.productID == "") {
-        setProductData({...productData, ['productID']: Date.now().toString(36) + Math.random().toString(36).substr(2)})
-      }
+    if (productData.productID == "") {
+      setProductData({...productData, ['productID']: Date.now().toString(36) + Math.random().toString(36).substr(2)})
+    }
 
-      const handelTypedData = (e) => {
-        setProductData({...productData, [e.target.name]: e.target.value})
-      }
+    const handelTypedData = (e) => {
+      setProductData({...productData, [e.target.name]: e.target.value})
+    }
 
-    //   const handleSelectedImage = (e) => {
-        
-    //   }
+
     const imageUpload = (file, progress, data) => {
-        // for (let i = 0; i < 4; i++) {
-        // file.map(fil => {
-            const imageRef = ref(storage, `products/${productData.productID}/${file.name}`)
-            const taskUpload = uploadBytesResumable(imageRef, file)
-            taskUpload.on('state_changed', snapshot => {
-                console.log(progress ,(snapshot.bytesTransferred / snapshot.totalBytes) * 100)
-                setImageUploadProgress({...imageUploadProgress, [progress]: (snapshot.bytesTransferred / snapshot.totalBytes) * 100})
-                }, error => {
-                alert(error.message)
-            }, () => {
-                getDownloadURL(taskUpload.snapshot.ref).then(url => {
-                    setProductData({...productData, [data]: url})
-                })
+        const imageRef = ref(storage, `products/${productData.productID}/${file.name}`)
+        const taskUpload = uploadBytesResumable(imageRef, file)
+        taskUpload.on('state_changed', snapshot => {
+            console.log(progress ,(snapshot.bytesTransferred / snapshot.totalBytes) * 100)
+            setImageUploadProgress({...imageUploadProgress, [progress]: (snapshot.bytesTransferred / snapshot.totalBytes) * 100})
+            }, error => {
+            alert(error.message)
+        }, () => {
+            getDownloadURL(taskUpload.snapshot.ref).then(url => {
+                setProductData({...productData, [data]: url})
             })
-        // }
+        })
     }
 
-    const submitProduct =async (e) => {
+    const submitProduct = async (e) => {
         e.preventDefault()
-        
-        
-        // imageUpload(image1, "image1", "image1")
-        // if (imageUploadProgress.image1 ==100) {
-        //     imageUpload(image2, "image2", "image2")
-        // // }
-        //     // if (imageUploadProgress.image2 ==100) {
-        //         imageUpload(image3, "image3", "image3")
-        //     // }
-        //         // if (imageUploadProgress.image3 == 100) {
-        //             imageUpload(image4, "image4", "image4")
-                // }
-        // if (imageUploadProgress.image1 == 100) {
-            
-        // }
-        // await addProduct(productData).then(data => {
-        //     console.log(data)
-        // })
     }
-
-    // console.log(imageUploadProgress)
-    // console.log(productData)
-    // console.log(productData)
 
 
   return (
