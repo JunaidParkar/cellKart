@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../css/brandBox.css'
 import apple from '../assets/brand/apple.png'
 
-const BrandBox = () => {
+const BrandBox = (props) => {
+
+  const [productID, setproductID] = useState(props.productData)
+
+  // useEffect(() => {
+    
+  // }, [productID]);
+
+
   return (
     <>
       <div className="brands-box">

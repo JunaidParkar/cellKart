@@ -17,7 +17,7 @@ const AdminLogin = () => {
         setAdminData({...adminData, [e.target.name]: e.target.value})
     }
 
-    console.log(adminData)
+    // console.log(adminData)
 
     const handelLogin = async (e, data) => {
         e.preventDefault()
@@ -39,11 +39,11 @@ const AdminLogin = () => {
                 </div>
                 <div className="inputWrappers">
                     <label htmlFor='password'>password</label>
-                    <input type="text" name="password" id="password" onChange={e => handelData(e)} placeholder='Enter admin password' required />
+                    <input type="password" name="password" id="password" onChange={e => handelData(e)} placeholder='Enter admin password' required />
                 </div>
-                <div className="inputWrappers forgotBtnContainer">
+                {/* <div className="inputWrappers forgotBtnContainer">
                     <Link>forgot password??</Link>
-                </div>
+                </div> */}
                 <div className="inputWrappers loginBtn">
                     <input type="submit" value="Login" />
                 </div>

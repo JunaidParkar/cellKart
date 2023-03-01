@@ -13,6 +13,7 @@ const MainPage = () => {
     // const [descriptionClicked, setDescriptionClicked] = useState(false)
     const [productsData, setProductsData] = useState()
     const [productDescriptionId, setProductDescriptionId] = useState(null)
+    const [productClickedData, setProductClickedData] = useState("")
 
 
     useEffect(() => {
@@ -24,6 +25,18 @@ const MainPage = () => {
       mainFunction()
     }, [])
 
+    
+    const getProductIDFromClicked = (id) => {
+        console.log(productsData[0][id])
+        setProductClickedData(productsData[0][id])
+    }
+
+    
+
+    console.log(productDescriptionId)
+    
+    // console.log(productDescriptionId)
+    // console.log(productsData[0])
 
   return (
     <>
@@ -40,7 +53,7 @@ const MainPage = () => {
                             productsData !== null && productsData !== undefined ? 
                             Object.keys(productsData[0]).map((key, index) => {
                                 // console.log(productsData[0][key])
-                                return <ProductCards keys={key} productsDatas={productsData[0][key]} />
+                                return <ProductCards key={index} keys={key} clickedID={getProductIDFromClicked} productsDatas={productsData[0][key]} />
                             })
                             : ""
                         }
@@ -58,7 +71,7 @@ const MainPage = () => {
         </div>
         <Footer />
 
-        <ProductDescription />
+        <ProductDescription productData={productClickedData} />
     </>
   )
 }

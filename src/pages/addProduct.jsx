@@ -6,6 +6,7 @@ import addProduct from '../firebase/admin/manageProducts'
 import { storage } from '../firebase/config'
 // import { ref } from 'firebase/database'
 import { getDownloadURL, uploadBytesResumable, ref } from 'firebase/storage'
+import { addProductToDB } from '../firebase/productContext'
 
 const AddProduct = () => {
 
@@ -61,12 +62,11 @@ const AddProduct = () => {
         const imageRef = ref(storage, `products/${productData.productID}/${file.name}`)
         const taskUpload = uploadBytesResumable(imageRef, file)
         taskUpload.on('state_changed', snapshot => {
-            console.log(progress ,(snapshot.bytesTransferred / snapshot.totalBytes) * 100)
             setImageUploadProgress({...imageUploadProgress, [progress]: (snapshot.bytesTransferred / snapshot.totalBytes) * 100})
             }, error => {
             alert(error.message)
-        }, () => {
-            getDownloadURL(taskUpload.snapshot.ref).then(url => {
+        }, async () => {
+            await getDownloadURL(taskUpload.snapshot.ref).then(url => {
                 setProductData({...productData, [data]: url})
             })
         })
@@ -74,7 +74,24 @@ const AddProduct = () => {
 
     const submitProduct = async (e) => {
         e.preventDefault()
+        if (productData.brand  !== "" && productData.date !== "" && productData.image1 !== "" && productData.image2 !== "" && productData.image3 !== "" && productData.image4 !== "" && productData.info !=="" && productData.marketPrice !== "" && productData.name !== "" && productData.productID !== "" && productData.sellingPrice !== "") {
+            await addProductToDB(productData).then(e => {
+                if (!e[1]) {
+                    if (e[0]) {
+                        alert("data inserted")
+                        navigate("/codes/admin")
+                    } else{
+                        alert("data unable to insert")
+                    }
+                } else {
+                    alert(e[1])
+                }
+            })
+        } else {
+            alert("Something is missing")
+        }
     }
+
 
 
   return (
@@ -107,18 +124,18 @@ const AddProduct = () => {
                 <div className="productInputWrapper inline">
                     <div className="innerProductInputWrapper">
                         <label htmlFor="image1">{ image1 == null ? "Upload image 1" : image1.name }</label>
-                        <input type="file" hidden name="image1" id="image1" onChange={e => setImage1(e.target.files[0])} required />
+                        <input type="file" hidden disabled={image1 == null ? false : true} name="image1" id="image1" onChange={e => setImage1(e.target.files[0])} required />
                         <input type="range" disabled value={imageUploadProgress.image1} min="0" max="100" name="" id="" />
                         <div className="productSubmitWrapper">
-                            <input type="button" value="upload" onClick={() => imageUpload(image1, "image1", "image1")} disabled={imageUploadProgress.image1 == 100 ? true : false} />
+                            <input type="button" value="upload" onClick={() => {imageUpload(image1, "image1", "image1"); document.getElementById("image1").setAttribute("disabled", true);}} disabled={image1 == null ? true : productData.image1 =="" ? false : true} />
                         </div>
                     </div> 
                     <div className="innerProductInputWrapper">
                         <label htmlFor="image2">{ image2 == null ? "Upload image 2" : image2.name }</label>
-                        <input type="file" hidden name="image2" id="image2" onChange={e => setImage2(e.target.files[0])} required />
+                        <input type="file" hidden disabled={image1 !== null && image2} name="image2" id="image2" onChange={e => setImage2(e.target.files[0])} required />
                         <input type="range" disabled value={imageUploadProgress.image2} min="0" max="100" name="" id="" />
                         <div className="productSubmitWrapper">
-                            <input type="button" value="upload" onClick={() => imageUpload(image2, "image2", "image2")} disabled={imageUploadProgress.image1 == 100 && imageUploadProgress.image2 == 100 ? true : imageUploadProgress.image1 !== 100 ? true : false} />
+                            <input type="button" value="upload" onClick={() => {imageUpload(image2, "image2", "image2"), document.getElementById("image2").setAttribute("disabled", true);}} disabled={image2 == null ? true : productData.image2 == "" ? productData.image1 == "" ? true : false : true} />
                         </div>
                     </div> 
                     <div className="innerProductInputWrapper">
@@ -126,7 +143,7 @@ const AddProduct = () => {
                         <input type="file" hidden name="image3" id="image3" onChange={e => setImage3(e.target.files[0])} required />
                         <input type="range" disabled value={imageUploadProgress.image3} min="0" max="100" name="" id="" />
                         <div className="productSubmitWrapper">
-                            <input type="button" value="upload" onClick={() => imageUpload(image3, "image3", "image3")} disabled={imageUploadProgress.image1 == 100 && imageUploadProgress.image2 == 100 && imageUploadProgress.image3 == 100 ? true : imageUploadProgress.image2 !== 100 ? true : false} />
+                            <input type="button" value="upload" onClick={() => {imageUpload(image3, "image3", "image3"), document.getElementById("image3").setAttribute("disabled", true);}} disabled={image3 == null ? true : productData.image3 == "" ? productData.image2 == "" ? true : false : true} />
                         </div>
                     </div> 
                     <div className="innerProductInputWrapper">
@@ -134,7 +151,7 @@ const AddProduct = () => {
                         <input type="file" hidden name="image4" id="image4" onChange={e => setImage4(e.target.files[0])} required />
                         <input type="range" disabled value={imageUploadProgress.image4} min="0" max="100" name="" id="" />
                         <div className="productSubmitWrapper">
-                            <input type="button" value="upload" onClick={() => imageUpload(image4, "image4", "image4")} disabled={imageUploadProgress.image1 == 100 && imageUploadProgress.image2 == 100 && imageUploadProgress.image3 == 100 && imageUploadProgress.image4 == 100 ? true : imageUploadProgress.image3 !== 100 ? true : false} />
+                            <input type="button" value="upload" onClick={() => {imageUpload(image4, "image4", "image4"); document.getElementById("image4").setAttribute("disabled", true);}} disabled={image4 == null ? true: productData.image4 == "" ? productData.image3 == "" ? true : false: true} />
                         </div>
                     </div> 
                 </div> 
@@ -143,7 +160,7 @@ const AddProduct = () => {
                     <textarea type="text" name="info" placeholder='Enter some details in short' id="moreInfo" onChange={e => handelTypedData(e)} required rows="3" />
                 </div>
                 <div className="productSubmitWrapper">
-                    <input type="submit" value="Add product" disabled={!(imageUploadProgress.image1 == 100 && imageUploadProgress.image2 == 100 && imageUploadProgress.image3 == 100 && imageUploadProgress.image4 == 100) ? true : false } />
+                    <input type="submit" value="Add product" disabled={productData.image1 == "" || productData.image2 == "" || productData.image3 == "" || productData.image4 == ""} />
                 </div>
             </form>
         </div>

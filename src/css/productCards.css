@@ -1,6 +1,6 @@
 
 
-.home .product-box .product-card {
+.product-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,13 +9,13 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
-.home .product-box .product-card .img {
+.product-card .img {
     width: 100%;
     max-height: 200px;
     overflow: hidden;
 }
 
-.home .product-box .product-card .img img {
+.product-card .img img {
     width: 100%;
     height: 100%;
     object-position: top;
@@ -23,13 +23,13 @@
     object-fit: cover;
 }
 
-.home .product-box .product-card .detail {
+.product-card .detail {
     width: 100%;
     padding: 0 10px;
     position: relative;
 }
 
-.home .product-box .product-card .detail .brand,
+.product-card .detail .brand,
 .prod-desc .box .content .brand {
     background-color: var(--blue);
     width: auto;
@@ -42,7 +42,7 @@
     gap: 5px;
 }
 
-.home .product-box .product-card .detail .brand .dot,
+.product-card .detail .brand .dot,
 .prod-desc .box .content .brand .dot {
     width: 5px;
     height: 5px;
@@ -50,7 +50,7 @@
     border-radius: 50%;
 }
 
-.home .product-box .product-card .detail .name {
+.product-card .detail .name {
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
@@ -60,7 +60,7 @@
     margin: 5px 0;
 }
 
-.home .product-box .product-card .detail .price {
+.product-card .detail .price {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -69,7 +69,7 @@
     margin-top: 10px;
 }
 
-.home .product-box .product-card .detail .price .selling {
+.product-card .detail .price .selling {
     background: var(--orange-50);
     padding: 2px 15px;
     border-radius: 15px;
@@ -78,13 +78,13 @@
     color: #000000aa;
 }
 
-.home .product-box .product-card .detail .price .cutting {
+.product-card .detail .price .cutting {
     text-decoration: line-through;
     font-size: 14px;
     opacity: 70%;
 }
 
-.home .product-box .product-card .detail .heart,
+.product-card .detail .heart,
 .prod-desc .box .img .heart {
     width: 30px;
     height: 30px;
@@ -100,7 +100,7 @@
     border: 1px solid rgb(154, 154, 154);
 }
 
-.home .product-box .product-card .detail .heart.active {
+.product-card .detail .heart.active {
     background: url('https://img.icons8.com/color/256/hearts.png');
     background-size: 20px;
     background-position: center;

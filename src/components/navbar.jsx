@@ -10,17 +10,17 @@ const Navbar = () => {
             <li className="logo">
                 <img src={logo} alt="" />
             </li>
-            <li className="btns" id="mnav">
+            {/* <li className="btns" id="mnav">
                 <span className="active">home</span>
                 <span>products</span>
                 <span>about</span>
                 <span>contact</span>
                 <span className="mnavclose">close</span>
-            </li>
+            </li> */}
             <li className="btns-r">
-                <span className="search-btn" ><img src={search} alt="" /></span>
+                {/* <span className="search-btn" ><img src={search} alt="" /></span> */}
                 <span className="sell-btn">sell</span>
-                <span className="search-btn menu" ><img src="https://img.icons8.com/ios/256/menu-rounded.pnghttps://img.icons8.com/ios/256/menu-rounded.png" alt="" /></span>
+                {/* <span className="search-btn menu" ><img src="https://img.icons8.com/ios/256/menu-rounded.pnghttps://img.icons8.com/ios/256/menu-rounded.png" alt="" /></span> */}
             </li>
         </div>
     </>

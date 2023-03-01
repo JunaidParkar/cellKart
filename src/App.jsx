@@ -5,6 +5,7 @@ import AddProduct from './pages/addProduct'
 import AdminLogin from './pages/adminLogin'
 import AdminPanel from './pages/adminPanel'
 import MainPage from './pages/mainPage'
+import RemoveProduct from './pages/removeProduct'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Route path='/codes' element={<AdminLogin />} />
           <Route path='/codes/admin' element={<AdminPanel />} />
           <Route path='/codes/admin/addproducts' element={<AddProduct />} />
+          <Route path='/codes/admin/removeProducts' element={<RemoveProduct />} />
           {/* ffhf */}
         </Routes>
       </BrowserRouter>

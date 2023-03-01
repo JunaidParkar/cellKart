@@ -25,6 +25,8 @@ const AdminPanel = () => {
             <div className="boxContainerMain">
                 <h3>Admin Panel</h3>
                 <Link to="/codes/admin/addproducts" ><h4>add product</h4></Link>
+                <Link to="/codes/admin/removeProducts" ><h4>Remove Product</h4></Link>
+                <Link to="/" onClick={() => localStorage.clear()} >Log out</Link>
             </div>
         </div>
     </>

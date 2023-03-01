@@ -1,0 +1,46 @@
+.cont{
+    width: 100vw;
+    height: auto;
+    padding: 10px;
+    z-index: 99;
+    position: relative;
+}
+
+.cont .product-box{
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+}
+
+.zcont{
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.zcont form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: var(--poppins) !important;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.zcont form input{
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 0;
+}
+
+.zcont form input:focus{
+    outline: none;
+}

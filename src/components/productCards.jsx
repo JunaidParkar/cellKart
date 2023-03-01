@@ -1,29 +1,24 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../css/productCards.css'
-import phone from '../assets/product/p1.png'
 
 const ProductCards = (props) => {
-    console.log(props.productsDatas)
-    console.log(props.keys)
-    let a = `${props.productsDatas}.name`   
-    console.log(a)
 
   return (
     <>
-        <div className="product-card" productid={props.keys} onClick={() => {props.uid("hello")}}>
-            <div className="img">
-                <img src={""} alt="" />
+        <div className="product-card" style={{cursor: 'pointer'}} productid={props.keys} onClick={(e) => props.clickedID(e.target.getAttribute("productid"))}>
+            <div className="img" productid={props.keys}>
+                <img src={props.productsDatas.Images.Link1} productid={props.keys} alt="" />
             </div>
-            <div className="detail">
-                <div className="brand">
-                    <div className="dot"></div>{props.productsDatas.name}
+            <div className="detail" productid={props.keys}>
+                <div className="brand" productid={props.keys}>
+                    <div className="dot" productid={props.keys}></div>{props.productsDatas.name}
                 </div>
-                <div className="name">{props.productsDatas.MoreInfo}</div>
-                <div className="price">
-                    <div className="selling">Rs: {props.productsDatas.SellingPrice}</div>
-                    <div className="cutting">Rs: {props.productsDatas.MarketPrice}</div>
+                <div className="name" productid={props.keys}>{props.productsDatas.MoreInfo}</div>
+                <div className="price" productid={props.keys}>
+                    <div className="selling" productid={props.keys}>Rs: {props.productsDatas.SellingPrice}</div>
+                    <div className="cutting" productid={props.keys}>Rs: {props.productsDatas.MarketPrice}</div>
                 </div>
-                <div className="heart active"></div>
+                {/* <div className="heart active" productid={props.keys}></div> */}
             </div>
         </div>
     </>
