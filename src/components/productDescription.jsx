@@ -36,7 +36,7 @@ const ProductDescription = (props) => {
 
 
     const fetchDescription = (name) => {
-        let OPENAI_API_KEY = "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";
+        let OPENAI_API_KEY = "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";
         // var bTextToSpeechSupported = false;
         // var bSpeechInProgress = false;
         // var oSpeechRecognizer = null
